@@ -1,0 +1,1099 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hackathon Utrera</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- inicio -->
+    <div id="inicio" class="inicio bg-body-primary">
+      <!-- MENÚ -->
+      <nav
+        id="nav"
+        class="fixed-top navbar navbar-expand-lg container-xl bg-body-tertiary  rounded-div"
+      >
+        <div class="container-fluid">
+          <a href="index.html" class="text-decoration-none">
+            <div
+              class="navbar-brand text-secondary m-3 px-3 py-2 no-border border border-2 rounded-4"
+            >
+              <h1 class="text-center display-4 fw-bold lh-1 fuenteMix">
+                HACKATHON <br /><span class="display-5">UTRERA</span>
+              </h1>
+            </div>
+          </a>
+          <button
+            class="navbar-toggler bg-secondary me-4"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse bg-body-tertiary" id="navbarNavAltMarkup">
+            <div
+              class="navbar-nav text-center container-l w-100 justify-content-end"
+            >
+              <a
+                class="nav-link px-5 active pl-5 fs-2 text-secondary hover-nav lh-base"
+                aria-current="page"
+                href="#inicio"
+                >Inicio</a
+              >
+              <a
+                class="nav-link px-5 fs-2 text-secondary hover-nav lh-base"
+                href="#acerca"
+                >Acerca del Evento</a
+              >
+              <a
+                class="nav-link px-5 fs-2 text-secondary hover-nav lh-base"
+                href="#informacion"
+                >Información Adicional</a
+              >
+              <a
+                class="nav-link px-5 fs-2 text-secondary hover-nav lh-base"
+                href="#faqs"
+                >FAQs</a
+              >
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <!-- TEXTO -->
+      <div class="row text-white g-0 mt-5 pb-5">
+        <div class="col-md-3"></div>
+        <div class="col-xl-6 px-5">
+          <h2 class="text-secondary text-center titulo">¿En qué consiste?</h2>
+          <p class="text-primary fs-2 lh-base text-center">
+            Durante una mañana intensa y única, estudiantes talentosos de los
+            centros educativos de Utrera participan en un desafío para mejorar
+            la competitividad local, considerando metas globales para un futuro
+            sostenible.
+          </p>
+        </div>
+        <div class="col-md-3"></div>
+      </div>
+      <div class="pb-5"></div>
+
+      <!-- IMÁGENES -->
+      <div class="container-fluid my-5 pb-5">
+        <div class="row">
+          <div
+            class="col-6 col-md-3 d-flex justify-content-end flex-column align-items-center"
+          >
+            <img
+              src="images/jovenes.svg"
+              class="z-index-1 img-fluid w-50 img-animation1"
+              alt=""
+            />
+            <p class="z-index-1 mt-2 text-primary display-5">JÓVENES</p>
+          </div>
+          <div
+            class="col-6 col-md-3 d-flex justify-content-end flex-column align-items-center"
+          >
+            <img
+              src="images/retos.svg"
+              class="z-index-1 img-fluid retos-grande img-animation2"
+              alt=""
+            />
+            <p class="z-index-1 mt-2 text-primary display-5">RETOS</p>
+          </div>
+          <div
+            class="col-6 col-md-3 d-flex justify-content-end flex-column align-items-center"
+          >
+            <img
+              src="images/jurado.svg"
+              class="z-index-1 img-fluid w-50 img-animation3"
+              alt=""
+            />
+            <p class="z-index-1 mt-2 text-primary display-5">JURADO</p>
+          </div>
+          <div
+            class="col-6 col-md-3 d-flex justify-content-end flex-column align-items-center"
+          >
+            <img
+              src="images/premios.svg"
+              class="z-index-1 img-fluid w-50 img-animation4"
+              alt=""
+            />
+            <p class="z-index-1 mt-2 text-primary display-5">PREMIOS</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- INFO -->
+      <div class="row container-fluid mx-auto">
+        <div
+          class="z-index-1 col-lg-4 d-flex align-items-center justify-content-center my-4"
+        >
+          <i class="fa-solid fa-location-dot text-secondary me-4 mb-3"></i>
+          <div class="text-secondary fs-3 fw-semibold">
+            <p class="lh-1 text-primary">Biblioteca Municipal de Utrera</p>
+            <p class="lh-1">C. Álvarez Quintero, 39, 41710 Utrera, Sevilla</p>
+          </div>
+        </div>
+
+        <div
+          class="z-index-1 col-lg-4 d-flex align-items-center justify-content-center my-4"
+        >
+          <div class="contador">
+            <div class="contador text-primary">
+              <span class="no-display">{</span>
+              <div class="unidad">
+                <span class="text-primary" id="days"></span>
+                <div class="text-secondary">días</div>
+              </div>
+              :
+              <div class="unidad">
+                <span class="text-primary" id="hours"></span>
+                <div class="text-secondary">horas</div>
+              </div>
+              :
+              <div class="unidad">
+                <span class="text-primary" id="minutes"></span>
+                <div class="text-secondary">minutos</div>
+              </div>
+              :
+              <div class="unidad">
+                <span class="text-primary" id="seconds"></span>
+                <div class="text-secondary">segundos</div>
+              </div>
+              <span class="no-display">&nbsp;}</span>
+            </div>
+            
+          </div>
+          <!-- <p>
+            <span id="days"></span> días / <span id="hours"></span> horas /
+            <span id="minutes"></span> minutos /
+            <span id="seconds"></span> segundos
+          </p> -->
+        </div>
+
+        <div
+          class="z-index-1 col-lg-4 d-flex align-items-center justify-content-center my-4"
+        >
+          <i class="fa-regular fa-calendar text-secondary me-4 mb-2"></i>
+          <div class="text-secondary fs-3 fw-semibold">
+            <p class="lh-1 text-primary">22 de febrero de 2024</p>
+            <p class="lh-1">08:30 a 15:00</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Acerca del Evento -->
+    <div id="acerca" class="bg-body-secondary pt-5 container-fluid z-index-1">
+      <!-- EL RETO -->
+      <div class="container pt-5">
+        <h2 class="text-center mb-5 pt-5">- EL RETO -</h2>
+        <div class="row m-5 p-5 reto-bk">
+          <div class="col-12 col-xxl-6 lh-base fs-3 pt-5">
+            <!-- <img
+              class="ms-4 img-fluid float-end w-25 img-round"
+              src="images/foto_corporativa_patricia_sanchez.jpg"
+              alt=""
+            /> -->
+            <p>
+              El <span class="text-primary fw-bold">reto</span> de esta edición
+              del Hackathon será propuesto por la empresaria utrerana
+              <span class="text-primary fw-bold">Patricia Sánchez</span>.
+            </p>
+            <p>
+              Patricia, abogada y consultora estratégica de Marketing Digital y
+              Fashion Law, es empresaria y directora CEO de 'Fashion & Digital
+              Law' y Cofundadora de la Asociación de Emprendedoras Digitales 'La
+              Cara V'.
+            </p>
+            <p class="pb-5">
+              Profesional con formación en Derecho y Administración de Empresas,
+              especializada en Marketing Digital de Moda. Con más de 10 años de
+              experiencia en roles directivos, ha dirigido campañas de Social &
+              Digital Media. Combina habilidades jurídicas y consultorías en
+              moda y belleza. Destacada ponente internacional, autora de una
+              guía sobre Marketing Digital de Moda con inteligencia artificial.
+              Ha trabajado como Marketing Manager en empresas como Celopman y
+              agencias de publicidad, colaborando con marcas reconocidas como
+              Ikea e Inditex. Miembro del Comité de Expertos en Derecho de la
+              Moda en varios países.
+            </p>
+          </div>
+          <div class="col-12 col-xxl-6 d-flex justify-content-center">
+            <img
+              class="img-fluid w-75 img-round"
+              src="images/foto_corporativa_patricia_sanchez.jpg"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-5 pt-5"></div>
+      <!-- FASES -->
+      <div class="container pt-5 mt-5">
+        <h2 class="text-center mb-5">- FASES -</h2>
+        <div class="row mt-5">
+          <div
+            class="col-6 col-md-4 d-flex justify-content-start flex-column align-items-center"
+          >
+            <img
+              src="images/lanzamiento.svg"
+              class="z-index-1 img-fluid w-50 img-animation4 scale"
+              alt=""
+            />
+            <p
+              class="z-index-1 mt-2 text-primary display-5 fs-1 px-3 text-center pb-5"
+            >
+              1. Desafío Inicial
+            </p>
+          </div>
+
+          <div
+            class="col-6 col-md-4 d-flex justify-content-start flex-column align-items-center"
+          >
+            <img
+              src="images/generacion_idea.svg"
+              class="z-index-1 img-fluid w-50 img-animation4 scale"
+              alt=""
+            />
+            <p
+              class="z-index-1 mt-2 text-primary display-5 fs-1 px-3 text-center pb-5"
+            >
+              2. Generación de Ideas
+            </p>
+          </div>
+
+          <div
+            class="col-6 col-md-4 d-flex justify-content-start flex-column align-items-center"
+          >
+            <img
+              src="images/creacion.svg"
+              class="z-index-1 img-fluid w-50 img-animation4 scale"
+              alt=""
+            />
+            <p
+              class="z-index-1 mt-2 text-primary display-5 fs-1 px-1 text-center pb-5"
+            >
+              3. Desarrollo de Modelos de Negocios a través de Canvas
+            </p>
+          </div>
+
+          <div
+            class="col-6 col-md-4 d-flex justify-content-start flex-column align-items-center"
+          >
+            <img
+              src="images/exposicion.svg"
+              class="z-index-1 img-fluid w-50 img-animation4 scale"
+              alt=""
+            />
+            <p
+              class="z-index-1 mt-2 text-primary display-5 fs-1 px-3 text-center pb-5"
+            >
+              4. Exposición de Soluciones al Desafío
+            </p>
+          </div>
+
+          <div
+            class="col-6 col-md-4 d-flex justify-content-start flex-column align-items-center"
+          >
+            <img
+              src="images/seleccion.svg"
+              class="z-index-1 img-fluid w-50 img-animation4 scale"
+              alt=""
+            />
+            <p
+              class="z-index-1 mt-2 text-primary display-5 fs-1 px-3 text-center pb-5"
+            >
+              5. Selección del Equipo Ganador
+            </p>
+          </div>
+
+          <div
+            class="col-6 col-md-4 d-flex justify-content-start flex-column align-items-center"
+          >
+            <img
+              src="images/entrega.svg"
+              class="z-index-1 img-fluid w-50 img-animation4 scale"
+              alt=""
+            />
+            <p
+              class="z-index-1 mt-2 text-primary display-5 fs-1 px-3 text-center pb-5"
+            >
+              6. Entrega de Premios
+            </p>
+          </div>
+        </div>
+        <div
+          class="row mt-5 pt-5 d-flex justify-content-center overflow-hidden"
+        >
+          <h3 class="text-center">Descanso</h3>
+          <p class="fs-3 w-75 text-center">
+            A lo largo de la mañana, para descansar y hacer un break,
+            disfrutaremos de un buffete de desayuno y café por cortesía de los
+            colaboradores
+            <span class="text-secondary fw-bold">Confitería Diego Vázquez</span>
+            y <span class="text-secondary fw-bold">Cafés Mocaibo</span>
+          </p>
+          <div
+            class="col-6 col-lg-6 pb-5 d-flex justify-content-center align-items-start"
+          >
+            <img
+              class="img-fluid colabs"
+              src="images/info/COLABORAN_DIEGO.png"
+              alt=""
+            />
+          </div>
+          <div
+            class="col-6 col-lg-6 pb-5 d-flex justify-content-center align-items-start"
+          >
+            <img
+              class="img-fluid w-50 colabs"
+              src="images/info/COLABORAN_MOCAIBO.png"
+              alt=""
+            />
+          </div>
+          <!-- </div> -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Información Adicional -->
+    <div id="informacion" class="bg-body-primary pb-5">
+      <!-- GALERÍAS -->
+      <div class="pt-5"></div>
+      <h2 class="text-center mb-5 pt-5 pb-5">- EDICIONES ANTERIORES -</h2>
+      <div class="row container-fluid d-flex justify-content-evenly">
+        <div class="col-12 col-lg-5 p-5 gallery-bkOne">
+          <h3 class="display-3 text-center mb-5 text-primary">2022</h3>
+          <!-- Gallery -->
+          <div class="row">
+            <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+              <img
+                src="images/hackathon2022/2022_5.jpg"
+                class="w-100 shadow-1-strong rounded mb-4 hover-scale"
+                alt="Boat on Calm Water"
+              />
+
+              <img
+                src="images/hackathon2022/2022_6.jpg"
+                class="w-100 shadow-1-strong rounded mb-4 hover-scale"
+                alt="Wintry Mountain Landscape"
+              />
+            </div>
+
+            <div class="col-lg-4 mb-4 mb-lg-0 col-md-6">
+              <img
+                src="images/hackathon2022/2022_1.jpg"
+                class="w-100 shadow-1-strong rounded mb-4 hover-scale"
+                alt="Mountains in the Clouds"
+              />
+
+              <img
+                src="images/hackathon2022/2022_2.jpg"
+                class="w-100 shadow-1-strong rounded mb-4 hover-scale"
+                alt="Boat on Calm Water"
+              />
+            </div>
+
+            <div class="col-lg-4 mb-4 mb-lg-0 col-md-6">
+              <img
+                src="images/hackathon2022/2022_10.jpg"
+                class="w-100 shadow-1-strong rounded mb-4 hover-scale"
+                alt="Waves at Sea"
+              />
+
+              <img
+                src="images/hackathon2022/2022_8.jpg"
+                class="w-100 shadow-1-strong rounded mb-4 hover-scale"
+                alt="Yosemite National Park"
+              />
+            </div>
+
+            <div class="col-lg-4 mb-4 mb-lg-0 col-md-6">
+              <img
+                src="images/hackathon2022/2022_11.jpg"
+                class="w-100 shadow-1-strong rounded mb-4 hover-scale"
+                alt="Waves at Sea"
+              />
+
+              <img
+                src="images/hackathon2022/2022_4.jpg"
+                class="w-100 shadow-1-strong rounded mb-4 hover-scale"
+                alt="Yosemite National Park"
+              />
+            </div>
+
+            <div class="col-lg-4 mb-4 mb-lg-0 col-md-6">
+              <img
+                src="images/hackathon2022/2022_7.jpg"
+                class="w-100 shadow-1-strong rounded mb-4 hover-scale"
+                alt="Waves at Sea"
+              />
+
+              <img
+                src="images/hackathon2022/2022_9.jpg"
+                class="w-100 shadow-1-strong rounded mb-4 hover-scale"
+                alt="Waves at Sea"
+              />
+            </div>
+
+            <div class="col-lg-4 mb-4 mb-lg-0 col-md-6">
+              <img
+                src="images/hackathon2022/2022_12.jpg"
+                class="w-100 shadow-1-strong rounded mb-4 hover-scale"
+                alt="Yosemite National Park"
+              />
+
+              <img
+                src="images/hackathon2022/2022_3.jpg"
+                class="w-100 shadow-1-strong rounded mb-4 hover-scale"
+                alt="Yosemite National Park"
+              />
+            </div>
+          </div>
+          <!-- Gallery -->
+        </div>
+
+        <div class="col-12 col-lg-5 p-5 gallery-bkTwo">
+          <h3 class="display-3 text-center mb-5 text-primary">2023</h3>
+          <!-- Gallery -->
+          <div class="row">
+            <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+              <img
+                src="images/hackathon2023/2023_5.jpg"
+                class="w-100 shadow-1-strong rounded mb-4 hover-scale"
+                alt="Boat on Calm Water"
+              />
+
+              <img
+                src="images/hackathon2023/2023_6.jpg"
+                class="w-100 shadow-1-strong rounded mb-4 hover-scale"
+                alt="Wintry Mountain Landscape"
+              />
+            </div>
+
+            <div class="col-lg-4 mb-4 mb-lg-0 col-md-6">
+              <img
+                src="images/hackathon2023/2023_1.jpg"
+                class="w-100 shadow-1-strong rounded mb-4 hover-scale"
+                alt="Mountains in the Clouds"
+              />
+
+              <img
+                src="images/hackathon2023/2023_2.jpg"
+                class="w-100 shadow-1-strong rounded mb-4 hover-scale"
+                alt="Boat on Calm Water"
+              />
+            </div>
+
+            <div class="col-lg-4 mb-4 mb-lg-0 col-md-6">
+              <img
+                src="images/hackathon2023/2023_10.jpg"
+                class="w-100 shadow-1-strong rounded mb-4 hover-scale"
+                alt="Waves at Sea"
+              />
+
+              <img
+                src="images/hackathon2023/2023_8.jpg"
+                class="w-100 shadow-1-strong rounded mb-4 hover-scale"
+                alt="Yosemite National Park"
+              />
+            </div>
+
+            <div class="col-lg-4 mb-4 mb-lg-0 col-md-6">
+              <img
+                src="images/hackathon2023/2023_11.jpg"
+                class="w-100 shadow-1-strong rounded mb-4 hover-scale"
+                alt="Waves at Sea"
+              />
+
+              <img
+                src="images/hackathon2023/2023_4.jpg"
+                class="w-100 shadow-1-strong rounded mb-4 hover-scale"
+                alt="Yosemite National Park"
+              />
+            </div>
+
+            <div class="col-lg-4 mb-4 mb-lg-0 col-md-6">
+              <img
+                src="images/hackathon2023/2023_7.jpg"
+                class="w-100 shadow-1-strong rounded mb-4 hover-scale"
+                alt="Waves at Sea"
+              />
+
+              <img
+                src="images/hackathon2023/2023_9.jpg"
+                class="w-100 shadow-1-strong rounded mb-4 hover-scale"
+                alt="Waves at Sea"
+              />
+            </div>
+
+            <div class="col-lg-4 mb-4 mb-lg-0 col-md-6">
+              <img
+                src="images/hackathon2023/2023_12.jpg"
+                class="w-100 shadow-1-strong rounded mb-4 hover-scale"
+                alt="Yosemite National Park"
+              />
+
+              <img
+                src="images/hackathon2023/2023_3.jpg"
+                class="w-100 shadow-1-strong rounded mb-4 hover-scale"
+                alt="Yosemite National Park"
+              />
+            </div>
+          </div>
+          <!-- Gallery -->
+        </div>
+      </div>
+
+      <!-- FAQ -->
+      <div id="faqs" class="mt-5 pt-5 container">
+        <hr />
+      </div>
+      <h2 class="text-center mb-3 pt-5">- FAQs -</h2>
+      <div class="row container pb-5 mb-5 mx-auto container g-5">
+        <div class="col-12 col-lg-6">
+          <h3 class="text-center mb-4 pt-5 text-primary">Evento</h3>
+          <div class="accordion mx-auto" id="accordionPanelsStayOpenExample">
+            <div class="accordion-item">
+              <h4 class="accordion-header">
+                <button
+                  class="accordion-button collapsed fs-2 bg-primary"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#panelsStayOpen-collapseOne"
+                  aria-expanded="false"
+                  aria-controls="panelsStayOpen-collapseOne"
+                >
+                  ¿Cuál es el objetivo de este evento?
+                </button>
+              </h4>
+              <div
+                id="panelsStayOpen-collapseOne"
+                class="accordion-collapse collapse"
+              >
+                <div class="accordion-body bg-secondary">
+                  <span class="fw-bold"
+                    >Hackathon Emprende Intercentros Utrera</span
+                  >
+                  es una oportunidad para que los alumnos y alumnas
+                  participantes pongan acción a sus ideas, participando como
+                  protagonistas en la co-creación de soluciones innovadoras a un
+                  reto de una empresa. Esto, además, les permite mostrar su
+                  talento a las empresas del entorno.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h4 class="accordion-header">
+                <button
+                  class="accordion-button collapsed fs-2 bg-primary"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#panelsStayOpen-collapseTwo"
+                  aria-expanded="false"
+                  aria-controls="panelsStayOpen-collapseTwo"
+                >
+                  ¿Con qué metodologías se trabajan?
+                </button>
+              </h4>
+              <div
+                id="panelsStayOpen-collapseTwo"
+                class="accordion-collapse collapse"
+              >
+                <div class="accordion-body bg-secondary">
+                  A lo largo del evento, se trabaja con las metodologías más
+                  innovadoras del mundo empresarial, como son el prototipado de
+                  ideas, el <span class="fw-bold">Speed Thinking</span>, la
+                  técnica del <span class="fw-bold">Elevator Pitch</span>, etc.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h4 class="accordion-header">
+                <button
+                  class="accordion-button collapsed fs-2 bg-primary"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#panelsStayOpen-collapseThree"
+                  aria-expanded="false"
+                  aria-controls="panelsStayOpen-collapseThree"
+                >
+                  ¿Qué empresa propondrá el reto?
+                </button>
+              </h4>
+              <div
+                id="panelsStayOpen-collapseThree"
+                class="accordion-collapse collapse"
+              >
+                <div class="accordion-body bg-secondary">
+                  El reto será propuesto por una empresa del entorno local
+                  basándose en su experiencia empresarial y en los problemas que
+                  como empresario/a enfrenta cada día.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h4 class="accordion-header">
+                <button
+                  class="accordion-button collapsed fs-2 bg-primary"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#panelsStayOpen-collapseFour"
+                  aria-expanded="false"
+                  aria-controls="panelsStayOpen-collapseFour"
+                >
+                  ¿Qué modalidades de participación existen?
+                </button>
+              </h4>
+              <div
+                id="panelsStayOpen-collapseFour"
+                class="accordion-collapse collapse"
+              >
+                <div class="accordion-body bg-secondary">
+                  En el Hackathon Intercentros #Utreraemprende sólo se puede
+                  participar de manera <span class="fw-bold">presencial</span>.
+                  Sin embargo, Andalucía Emprende promueve a lo largo del curso
+                  otros hackathones en formato online.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h4 class="accordion-header">
+                <button
+                  class="accordion-button collapsed fs-2 bg-primary"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#panelsStayOpen-collapseFive"
+                  aria-expanded="false"
+                  aria-controls="panelsStayOpen-collapseFive"
+                >
+                  ¿Cómo se desarrolla el evento?
+                </button>
+              </h4>
+              <div
+                id="panelsStayOpen-collapseFive"
+                class="accordion-collapse collapse"
+              >
+                <div class="accordion-body bg-secondary">
+                  Los participantes trabajarán en equipos intercentros e
+                  interdisciplinares en un espacio preparado exclusivamente para
+                  esta jornada y serán provistos con todos los materiales y
+                  herramientas que necesiten para desarrollar sus propuestas.<br /><br />El
+                  evento comienza con el lanzamiento del reto por parte del
+                  empresario/a. A continuación, se asigna a cada equipo una zona
+                  de trabajo y se les explican las herramientas con las que irán
+                  dando forma a su propuesta-solución del resto.<br /><br />Los
+                  mentores de Andalucía Emprende son los encargados de explicar
+                  las herramientas y estarán a disposición de los participantes
+                  para sus consultas.<br /><br />A lo largo de la mañana se hará
+                  una pausa para tomar un café (media hora). Los participantes
+                  disfrutarán de café y un catering dulce de manera gratuita
+                  gracias a las empresas colaboradoras Confitería Diego Vázquez
+                  y Cafés Mocaibo.<br /><br />El evento concluye con la elección
+                  del equipo ganador y la entrega de premios.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h4 class="accordion-header">
+                <button
+                  class="accordion-button collapsed fs-2 bg-primary"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#panelsStayOpen-collapseSix"
+                  aria-expanded="false"
+                  aria-controls="panelsStayOpen-collapseSix"
+                >
+                  ¿Dónde se celebrará?
+                </button>
+              </h4>
+              <div
+                id="panelsStayOpen-collapseSix"
+                class="accordion-collapse collapse"
+              >
+                <div class="accordion-body bg-secondary">
+                  Se celebrará en la planta baja de la
+                  <span class="fw-bold">Biblioteca Municipal de Utrera</span>,
+                  sita en C/Álvarez Quintero, 39.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h4 class="accordion-header">
+                <button
+                  class="accordion-button collapsed fs-2 bg-primary"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#panelsStayOpen-collapseSeven"
+                  aria-expanded="false"
+                  aria-controls="panelsStayOpen-collapseSeven"
+                >
+                  ¿En qué consisten los premios?
+                </button>
+              </h4>
+              <div
+                id="panelsStayOpen-collapseSeven"
+                class="accordion-collapse collapse"
+              >
+                <div class="accordion-body bg-secondary">
+                  <span class="fw-bold">Cada miembro del equipo ganador</span>
+                  será premiado con un vale para material escolar valorado en
+                  <span class="fw-bold">50€</span> que es aportado por el
+                  Ayuntamiento de Utrera. Dicho vale se podrá canjear en una
+                  papelería de la localidad.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h4 class="accordion-header">
+                <button
+                  class="accordion-button collapsed fs-2 bg-primary"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#panelsStayOpen-collapseEight"
+                  aria-expanded="false"
+                  aria-controls="panelsStayOpen-collapseEight"
+                >
+                  ¿Quién organiza el evento?
+                </button>
+              </h4>
+              <div
+                id="panelsStayOpen-collapseEight"
+                class="accordion-collapse collapse"
+              >
+                <div class="accordion-body bg-secondary">
+                  El concepto y formato del evento es de
+                  <span class="fw-bold">Andalucía Emprende</span
+                  >.<br /><br />Hackathon Emprende Intercentros Utrera está
+                  organizado conjuntamente por el Centro Andaluz de
+                  Emprendimiento de Utrera, el Instituto de Enseñanza
+                  Secundaria, Bachillerato y Formación Profesional IES
+                  PoncedeLeón y el Excmo. Ayuntamiento de Utrera.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-lg-6">
+          <h3 class="text-center mb-4 pt-5 text-primary">Organización</h3>
+          <div class="accordion mx-auto" id="accordionPanelsStayOpenExample">
+            <div class="accordion-item">
+              <h4 class="accordion-header">
+                <button
+                  class="accordion-button collapsed fs-2 bg-primary"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#panelsStayOpen-collapseNine"
+                  aria-expanded="false"
+                  aria-controls="panelsStayOpen-collapseNine"
+                >
+                  ¿Cuántos alumnos/as debe tener un equipo?
+                </button>
+              </h4>
+              <div
+                id="panelsStayOpen-collapseNine"
+                class="accordion-collapse collapse"
+              >
+                <div class="accordion-body bg-secondary">
+                  Los equipos tendrán entre 6 y 7 componentes.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h4 class="accordion-header">
+                <button
+                  class="accordion-button collapsed fs-2 bg-primary"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#panelsStayOpen-collapseTen"
+                  aria-expanded="false"
+                  aria-controls="panelsStayOpen-collapseTen"
+                >
+                  ¿Quién forma los equipos?
+                </button>
+              </h4>
+              <div
+                id="panelsStayOpen-collapseTen"
+                class="accordion-collapse collapse"
+              >
+                <div class="accordion-body bg-secondary">
+                  Los equipos los forma la organización teniendo como criterio
+                  principal que estos sean lo más interdisciplinares posible,
+                  puesto que esto enriquece las propuestas de solución.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h4 class="accordion-header">
+                <button
+                  class="accordion-button collapsed fs-2 bg-primary"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#panelsStayOpen-collapseEleven"
+                  aria-expanded="false"
+                  aria-controls="panelsStayOpen-collapseEleven"
+                >
+                  ¿Qué tengo que llevar si asisto presencialmente?
+                </button>
+              </h4>
+              <div
+                id="panelsStayOpen-collapseEleven"
+                class="accordion-collapse collapse"
+              >
+                <div class="accordion-body bg-secondary">
+                  Realmente, solo necesitas traer ¡muchas ganas de disfrutar!<br />Allí,
+                  pondremos a disposición de cada equipo un ordenador portátil,
+                  así como todos los materiales que necesitarás para trabajar
+                  (folios, rotuladores, etc.). Si quieres traer tu propio
+                  dispositivo, por supuesto puedes hacerlo.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h4 class="accordion-header">
+                <button
+                  class="accordion-button collapsed fs-2 bg-primary"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#panelsStayOpen-collapseTwelve"
+                  aria-expanded="false"
+                  aria-controls="panelsStayOpen-collapseTwelve"
+                >
+                  ¿Cuándo sabremos el reto que debemos trabajar?
+                </button>
+              </h4>
+              <div
+                id="panelsStayOpen-collapseTwelve"
+                class="accordion-collapse collapse"
+              >
+                <div class="accordion-body bg-secondary">
+                  El reto se conocerá el mismo día del evento.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h4 class="accordion-header">
+                <button
+                  class="accordion-button collapsed fs-2 bg-primary"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#panelsStayOpen-collapseThirteen"
+                  aria-expanded="false"
+                  aria-controls="panelsStayOpen-collapseThirteen"
+                >
+                  ¿De qué tipo será el reto que encontraremos?
+                </button>
+              </h4>
+              <div
+                id="panelsStayOpen-collapseThirteen"
+                class="accordion-collapse collapse"
+              >
+                <div class="accordion-body bg-secondary">
+                  El reto estará relacionado con los Objetivos de Desarrollo
+                  Sostenible (ODS) y con la Agenda 2030. Asimismo, partirá de un
+                  problema real de nuestro entorno más cercano.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h4 class="accordion-header">
+                <button
+                  class="accordion-button collapsed fs-2 bg-primary"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#panelsStayOpen-collapseFourteen"
+                  aria-expanded="false"
+                  aria-controls="panelsStayOpen-collapseFourteen"
+                >
+                  Durante la jornada, ¿hay algún tipo de seguimiento?
+                </button>
+              </h4>
+              <div
+                id="panelsStayOpen-collapseFourteen"
+                class="accordion-collapse collapse"
+              >
+                <div class="accordion-body bg-secondary">
+                  Los técnicos presentes de Andalucía Emprende asistirán a los
+                  grupos de trabajo siempre que los requieran.
+                </div>
+              </div>
+            </div>
+          </div>
+          <h3 class="text-center pt-1 text-primary">Horario</h3>
+          <div class="accordion mx-auto" id="accordionPanelsStayOpenExample">
+            <div class="accordion-item">
+              <h4 class="accordion-header">
+                <button
+                  class="accordion-button collapsed fs-2 bg-primary"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#panelsStayOpen-collapseFifteen"
+                  aria-expanded="false"
+                  aria-controls="panelsStayOpen-collapseFifteen"
+                >
+                  ¿Cuándo empieza y cuándo termina el evento?
+                </button>
+              </h4>
+              <div
+                id="panelsStayOpen-collapseFifteen"
+                class="accordion-collapse collapse"
+              >
+                <div class="accordion-body bg-secondary">
+                  El evento tendrá lugar el jueves 22 de febrero de 08:30h a
+                  15:00h.<br /><br />Como colofón al evento, se anunciará al
+                  equipo ganador seleccionado por el jurado, cuyos miembros se
+                  llevarán a casa su premio.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-5 pt-5 container">
+        <hr />
+      </div>
+      <h2 class="text-center mb-3 pt-5">- NOVEDADES -</h2>
+      <div class="row container pt-4 pb-5 mb-5 mx-auto container g-5">
+        <div class="d-flex justify-content-center">
+          <a
+            href="https://www.iesponcedeleon.es/search/label/Innicia"
+            target="_blank"
+            class="btn btn-primary fw-bold fs-3 px-5 py-3"
+            ><i class="fa-solid fa-link fs-3"></i>&nbsp; Ver novedades</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <!-- footer -->
+    <div class="m-5">
+      <h3 class="text-center pt-5">- Gestionan y Organizan -</h3>
+      <div class="row container mx-auto">
+        <div
+          class="col-6 d-flex flex-column justify-content-center align-items-center"
+        >
+          <img
+            class="img-fluid w-25 img-footer"
+            src="images/info/GESTIONAN CADE 1.jpg"
+            alt=""
+          />
+          <img
+            class="img-fluid h-25 img-footer mt-5"
+            src="images/info/ORGANIZAN AYTO 1.jpeg"
+            alt=""
+          />
+        </div>
+        <div
+          class="col-6 d-flex flex-column justify-content-center align-items-center"
+        >
+          <img
+            class="img-fluid w-25 img-footer2"
+            src="images/info/Logo Nueva Consejeria CADE.jpg"
+            alt=""
+          />
+          <img
+            class="img-fluid h-25 img-footer mt-5"
+            src="images/info/LOGO PONCE ORGANIZA.png"
+            alt=""
+          />
+        </div>
+      </div>
+
+      <div class="py-5 my-5 container">
+        <hr />
+      </div>
+      <h3 class="text-center mb-5">- Participantes -</h3>
+      <div
+        class="row container-fluid mx-auto d-flex justify-content-evenly align-items-center"
+      >
+        <img
+          class="img-fluid w-25 img-footer"
+          src="images/info/IMG-20230303-WA0004.jpg"
+          alt=""
+        />
+        <img
+          class="img-fluid w-25 img-footer"
+          src="images/info/SMX_Utrera.png"
+          alt=""
+        />
+        <img
+          class="img-fluid w-25 img-footer"
+          src="images/info/virgen_consolacion.png"
+          alt=""
+        />
+      </div>
+      <div
+        class="row container-fluid mx-auto d-flex justify-content-evenly align-items-center"
+      >
+        <img
+          class="img-fluid w-25 img-footer"
+          src="images/info/LOGO PONCE ORGANIZA.png"
+          alt=""
+        />
+        <img
+          class="img-fluid img-footer3"
+          src="images/info/LogoRuiz.png"
+          alt=""
+        />
+      </div>
+
+      <div class="py-5 my-5 container">
+        <hr />
+      </div>
+      <h3 class="text-center mb-5">- Colaboradores -</h3>
+      <div
+        class="row container-fluid mx-auto d-flex justify-content-evenly align-items-center"
+      >
+        <img
+          class="img-fluid w-25 img-footer"
+          src="images/info/COLABORAN_DIEGO.png"
+          alt=""
+        />
+        <img
+          class="img-fluid w-25 mb-5 pb-5 img-footer3"
+          src="images/info/COLABORAN_MOCAIBO.png"
+          alt=""
+        />
+      </div>
+
+      <hr />
+      <p class="text-center">
+        WEB REALIZADA POR
+        <span class="fw-bold">JOSÉ MARÍA JIMÉNEZ HORMIGO</span> DEL CFGS "DAW"
+        DEL IES RUIZ GIJÓN 2024
+      </p>
+      <hr />
+    </div>
+
+    <script src="js/utils.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
